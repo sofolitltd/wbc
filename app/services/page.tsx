@@ -1,0 +1,135 @@
+import Image from "next/image";
+
+const Services = () => {
+  return (
+    <section className="p-10 xl:px-20">
+      {/* header */}
+      <h1 className="bold-32">Services</h1>
+      <div className=" mt-1 mb-10 h-0.5 w-[100px] bg-gray-50"></div>
+
+      {/* row */}
+      <div className="mx-auto max-w-[1440px] grid grid-cols-1 md:grid-cols-2 gap-8 ">
+        {/* r-1 */}
+        <div className="border shadow-xl  rounded-xl p-5 hover:shadow-2xl">
+          <div className="flex gap-4">
+            <Image
+              src="/person-1.png"
+              alt="std"
+              width={64}
+              height={64}
+              className=" items-center"
+            />
+            <div>
+              <h3 className="bold-20 mt-1">Student Counseling</h3>
+              <p className="text-gray-30">
+                Focus on student lifestyles & problems
+              </p>
+            </div>
+          </div>
+
+          <p className=" mt-4 regular-16 text-gray-50">
+            Navigating the challenges of student life can be demanding, and
+            we're here to help. Our student counseling services provide a
+            supportive and confidential environment for students to address a
+            wide range of concerns
+          </p>
+
+          <div className="flex gap-5">
+            <div className="mt-5 border px-3 py-2 rounded">
+              <div className=" flex gap-4">
+                <p className=" line-through">700 BDT </p>
+                <p className=" font-bold">500 BDT </p>
+              </div>
+            </div>
+            <div className="mt-5 border px-3 py-2 rounded">
+              <div className=" flex gap-4">
+                <p className="">Time </p>
+                <p className=" font-bold">60 min</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* r-2 */}
+        <div className="border shadow-xl  rounded-xl p-5 hover:shadow-2xl">
+          <div className="flex gap-4">
+            <Image
+              src="/person-1.png"
+              alt="std"
+              width={64}
+              height={64}
+              className=" items-center"
+            />
+            <div>
+              <h3 className="bold-20 mt-1">Couple Counseling</h3>
+              <p className="text-gray-30">Focus on relationship strengths</p>
+            </div>
+          </div>
+
+          <p className=" mt-4 regular-16 text-gray-50">
+            Our couple counseling services provide a safe and nurturing space
+            for you and your partner to navigate the complexities of your
+            relationship. Learn effective ways to express your needs, concerns,
+            and feelings, address and resolve conflicts constructively.
+          </p>
+
+          <div className="flex gap-5">
+            <div className="mt-5 border px-3 py-2 rounded">
+              <div className=" flex gap-4">
+                <p className=" line-through">1000 BDT </p>
+                <p className=" font-bold">800 BDT </p>
+              </div>
+            </div>
+            <div className="mt-5 border px-3 py-2 rounded">
+              <div className=" flex gap-4">
+                <p className="">Time </p>
+                <p className=" font-bold">60 min</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* r-3 */}
+        <div className="border shadow-xl  rounded-xl p-5 hover:shadow-2xl">
+          <div className="flex gap-4">
+            <Image
+              src="/person-1.png"
+              alt="std"
+              width={64}
+              height={64}
+              className=" items-center"
+            />
+            <div>
+              <h3 className="bold-20 mt-1">Family Counseling</h3>
+              <p className="text-gray-30">Focus on family relationship</p>
+            </div>
+          </div>
+
+          <p className=" mt-4 regular-16 text-gray-50">
+            Our family counseling services are here to support you and your
+            loved ones on your journey toward healing, understanding, and
+            harmony. Learn effective ways to communicate, gain valuable insights
+            and tools to navigate the challenges of family
+          </p>
+
+          <div className="flex gap-5">
+            <div className="mt-5 border px-3 py-2 rounded">
+              <div className=" flex gap-4">
+                <p className=" line-through">1200 BDT </p>
+                <p className=" font-bold">1000 BDT </p>
+              </div>
+            </div>
+            <div className="mt-5 border px-3 py-2 rounded">
+              <div className=" flex gap-4">
+                <p className="">Time </p>
+                <p className=" font-bold">60 min</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;

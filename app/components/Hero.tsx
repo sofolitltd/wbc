@@ -1,31 +1,36 @@
-import Link from "next/link";
+
 import Button from "./Button";
 
 const Hero = () => {
   return (
     <section className="mx-auto max-w-[1440px] px-6 lg:px-20 3xl:px-0 flex flex-col py-10 pb-32 gap-20 md:gap-28 lg:py-20 xl:flex-row">
-      <div className="hero-map"></div>
+      <div className="hero-map h-1/3"></div>
 
       {/* left */}
       {/* ld-1 */}
       <div className=" relative z-20">
-        <h1 className="bold-40 lg:bold-64">Wellbeing Clinic</h1>
-        <p className="regular-16 mt-6 text-gray-50">
-          We want to be on each of your journeys seeking the satisfaction of
-          seeing the incorruptible beauty of nature. We can help you on an
-          adventure around the world in just one app
+        <h3 className="bold-20 uppercase">Welcome to</h3>
+        <h1 className="bold-52 lg:bold-64">Wellbeing Clinic</h1>
+        <p className="regular-16 mt-10 text-gray-50">
+          Your Haven for Mental Health Care. Our dedicated team offers expert
+          counseling, comprehensive assessments, and tailored psychological
+          support to foster your well-being. Explore our range of services
+          designed to provide personalized care, guidance, and holistic
+          solutions for your mental health needs.
         </p>
 
         {/* ld-2 */}
-        <div className=" mt-10 flex flex-col w-full gap-3 sm:flex-row">
-          
-          <Link href="https://play.google.com/store/apps/details?id=com.sofolit.wellbeingclinic" >
+        <div className=" mt-10 flex gap-4">
+          <a
+            target="_blank"
+            href="https://play.google.com/store/apps/details?id=com.sofolit.wellbeingclinic"
+          >
             <Button
               type={"button"}
               label={"Download App"}
               variant={"btn_green"}
             />
-          </Link>
+          </a>
           <Button
             type={"button"}
             label={"How we work"}

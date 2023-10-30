@@ -15,10 +15,11 @@ const Navbar = () => (
         </Link>
 
         {/* menu */}
-        <ul className="hidden h-full gap-6 lg:flex">
+        <ul className="flex h-full gap-6">
             {NAV_LINKS.map((link) => (
                 <Link
-                    href={link.href}
+
+                    href={`${link.href}${link.key}`}
                     key={link.key}
                     className="regular-16 text-gray-50 cursor-pointer pb-1.5 transition-all hover:font-bold"
                 >
@@ -37,13 +38,13 @@ const Navbar = () => (
         </div>
 
         {/* hamberger */}
-        <Image 
+        {/* <Image 
             src="/menu.svg" 
             alt="menu" 
             width={32} 
             height={32} 
             className="inline-block cursor-pointer lg:hidden"
-            />
+            /> */}
     </nav>
 );
 
