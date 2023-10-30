@@ -29,7 +29,7 @@ const Services = () => {
 
           <p className=" mt-4 regular-16 text-gray-50">
             Navigating the challenges of student life can be demanding, and
-            we're here to help. Our student counseling services provide a
+            we are here to help. Our student counseling services provide a
             supportive and confidential environment for students to address a
             wide range of concerns
           </p>
