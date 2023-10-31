@@ -1,48 +1,33 @@
-
-import Button from "./Button";
+import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="mx-auto max-w-[1440px] px-6 lg:px-20 3xl:px-0 flex flex-col py-10 pb-32 gap-20 md:gap-28 lg:py-20 xl:flex-row">
-      <div className="hero-map h-1/3"></div>
+    <section className="">
+      <div className="max-w-5xl mx-auto pt-20 sm:pt-24 md:pt-32">
+        {/* title */}
+        <h1 className=" text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl text-center tracking-tight dark:text-white">
+          Wellbeing Clinic: Leading mental health service provider
+        </h1>
 
-      {/* left */}
-      {/* ld-1 */}
-      <div className=" relative z-20">
-        <h3 className="bold-20 uppercase">Welcome to</h3>
-        <h1 className="bold-52 lg:bold-64">Wellbeing Clinic</h1>
-        <p className="regular-16 mt-10 text-gray-50">
-          Your Haven for Mental Health Care. Our dedicated team offers expert
-          counseling, comprehensive assessments, and tailored psychological
-          support to foster your well-being. Explore our range of services
-          designed to provide personalized care, guidance, and holistic
-          solutions for your mental health needs.
+        {/* subtitle*/}
+        <p className="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
+          Explore our range of services designed to provide personalized care,
+          guidance, and holistic solutions for your mental health needs.
         </p>
 
-        {/* ld-2 */}
-        <div className=" mt-10 flex gap-4">
+        {/* btn */}
+        <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
           <a
-            target="_blank"
+            className="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400"
             href="https://play.google.com/store/apps/details?id=com.sofolit.wellbeingclinic"
           >
-            <Button
-              type={"button"}
-              label={"Download App"}
-              variant={"btn_green"}
-            />
+            Download Our Android App
           </a>
-          <Button
-            type={"button"}
-            label={"How we work"}
-            icon="/play.svg"
-            variant={"btn_white_text"}
-          />
         </div>
       </div>
 
-      {/* right */}
-      <div className=" xl:w-1/2"></div>
     </section>
+    
   );
 };
 
