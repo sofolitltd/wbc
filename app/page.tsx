@@ -10,6 +10,8 @@ export default function Home() {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </Head>
+     <main>
+     
      
    {/* hero */}
    <Hero />
@@ -18,7 +20,7 @@ export default function Home() {
    {/* guide*/}
    {/* feature*/}
    {/* get app*/}
-   
+   </main>
    </>
   )
 }
