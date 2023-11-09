@@ -9,7 +9,7 @@ const Service = () => {
         </p>
 
         <h2 className="mt-2 text-3xl md:text-5xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
-          Service we prodvide
+          Service we provide
         </h2>
 
 
