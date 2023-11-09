@@ -5,15 +5,6 @@ import Hero from "./components/Hero";
 export default function Home() {
   return (
    <>
-    <div>
-
-
-
-  <Head>
-  <title>Wellbeing Clinic</title>
-  <meta name="description" content="Wellbeing Clinic is a mental health service provider that offers a comprehensive range of services to help you achieve and maintain optimal mental health. We are committed to providing personalized, compassionate care that addresses your unique needs and goals." />
-</Head>
-</div>
    {/* hero */}
    <Hero />
    {/* camp */}
