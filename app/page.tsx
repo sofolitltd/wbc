@@ -1,14 +1,15 @@
 
 import Camp from "./components/Camp";
 import Hero from "./components/Hero";
-import { metadata } from '../layout';
+
 
 export default function Home() {
   return (
    <>
      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
+        <title>"Wellbeing Clinic"</title>
+        <meta name="description" content="Wellbeing Clinic is a mental health service provider offering a comprehensive range of services for optimal mental health. We provide personalized, compassionate care that addresses your unique needs and goals." />
+
       </Head>
      <main>
      
