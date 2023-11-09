@@ -1,0 +1,5 @@
+# Robots.txt
+User-agent: *
+Disallow: /admin/
+
+Sitemap: https://wellbeingclinic.vercel.app/sitemap.xml
