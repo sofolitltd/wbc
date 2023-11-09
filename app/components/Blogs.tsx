@@ -12,10 +12,10 @@ const Blogs = () => {
         </p>
 
         {/* blogs */}
-        <div className=" grid  md:grid-cols-2 lg:grid-cols-3  mx-auto gap-x-3 my-12 md:my-14">
+        <div className=" grid  md:grid-cols-2 lg:grid-cols-3  mx-auto gap-x-6 my-12 md:my-14">
           {/* s1 */}
           <div className="">
-            <div className=" w-full rounded-lg p-4 h-full">
+            <div className=" w-full rounded-lg py-4 h-full">
               <Image
                 className=" flex  bg-blue-400/50 rounded-lg items-center"
                 src={"/img-1.png"}
@@ -35,7 +35,7 @@ const Blogs = () => {
 
           {/* s2 */}
           <div className="">
-            <div className=" w-full rounded-lg p-4 h-full">
+            <div className=" w-full rounded-lg py-4 h-full">
               <Image
                 className=" flex  bg-blue-400/50 rounded-lg items-center"
                 src={"/img-1.png"}
@@ -55,7 +55,7 @@ const Blogs = () => {
 
           {/* s1 */}
           <div className="">
-            <div className=" w-full rounded-lg p-4 h-full">
+            <div className=" w-full rounded-lg py-4 h-full">
               <Image
                 className=" flex  bg-blue-400/50 rounded-lg items-center"
                 src={"/img-1.png"}

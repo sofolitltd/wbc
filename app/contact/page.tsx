@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Contact = () => {
   return (
-    <section className="px-4 sm:px-6 md:px-24 mt-16">
+    <section className="px-4 sm:px-6 md:px-24 mt-10 md:mt-16">
       {/* header */}
       <h1 className="bold-32">Contact us </h1>
       <div className=" mt-1 h-0.5 w-[100px] bg-gray-50"></div>
