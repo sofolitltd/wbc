@@ -5,12 +5,16 @@ const Hero = () => {
     <section className="">
       <div className="max-w-5xl mx-auto pt-20 sm:pt-24 md:pt-32">
         {/* title */}
-        <h1 className=" text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl text-center tracking-tight dark:text-white">
-          Wellbeing Clinic: Leading mental health service provider
+        <h1 className=" text-teal-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl text-center tracking-tight dark:text-white">
+          Wellbeing Clinic
         </h1>
+        <h2 className="mt-2 text-green-700 font-bold text-2xl sm:text-3xl lg:text-4xl text-center tracking-tight dark:text-white">
+         Leading mental health service provider
+        </h2>
+        
 
         {/* subtitle*/}
-        <p className="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
+        <p className="my-8 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
           Explore our range of services designed to provide personalized care,
           guidance, and holistic solutions for your mental health needs.
         </p>

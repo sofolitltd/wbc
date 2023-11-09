@@ -2,15 +2,15 @@ import Image from "next/image";
 
 const Services = () => {
   return (
-    <section className="p-10 xl:px-20">
+    <section className="px-4 sm:px-6 md:px-24 mt-16">
       {/* header */}
       <h1 className="bold-32">Services</h1>
-      <div className=" mt-1 mb-10 h-0.5 w-[100px] bg-gray-50"></div>
+      <div className=" mt-1 h-0.5 w-[100px] bg-gray-50"></div>
 
       {/* row */}
-      <div className="mx-auto max-w-[1440px] grid grid-cols-1 md:grid-cols-2 gap-8 ">
+      <div className="mx-auto max-w-[1440px] grid grid-cols-1 lg:grid-cols-2 gap-8 py-12">
         {/* r-1 */}
-        <div className="border shadow-xl  rounded-xl p-5 hover:shadow-2xl">
+        <div className="border shadow-md rounded-xl p-5 hover:shadow-xl">
           <div className="flex gap-4">
             <Image
               src="/person-1.png"
@@ -31,7 +31,7 @@ const Services = () => {
             Navigating the challenges of student life can be demanding, and
             we are here to help. Our student counseling services provide a
             supportive and confidential environment for students to address a
-            wide range of concerns
+            wide range of concerns in every day life events.
           </p>
 
           <div className="flex gap-5">
@@ -51,7 +51,7 @@ const Services = () => {
         </div>
 
         {/* r-2 */}
-        <div className="border shadow-xl  rounded-xl p-5 hover:shadow-2xl">
+        <div className="border shadow-md  rounded-xl p-5 hover:shadow-xl">
           <div className="flex gap-4">
             <Image
               src="/person-1.png"
@@ -90,7 +90,7 @@ const Services = () => {
         </div>
 
         {/* r-3 */}
-        <div className="border shadow-xl  rounded-xl p-5 hover:shadow-2xl">
+        <div className="border shadow-md  rounded-xl p-5 hover:shadow-xl">
           <div className="flex gap-4">
             <Image
               src="/person-1.png"

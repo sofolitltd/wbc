@@ -1,16 +1,18 @@
-import React from 'react'
-import Image from 'next/image'
+import Image from "next/image";
 
-const Blog = () => {
+const Blogs = () => {
   return (
-    <section className="px-4 sm:px-6 md:px-24 mt-16">
-    {/* header */}
-    <h1 className="bold-32">Blog</h1>
-    <div className=" mt-1 h-0.5 w-[50px] bg-gray-50"></div>
+    <section>
+      <div className=" max-w mx-auto pt-12 sm:pt-20 md:pt-20">
+        <h2 className=" text-center mt-2 text-3xl md:text-5xl  text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
+          Popular News and Blogs
+        </h2>
+        <p className=" text-center mt-4 font-medium text-slate-600">
+          Within the realm of trending news and blogs
+        </p>
 
-
-    {/* blogs */}
-    <div className=" grid  md:grid-cols-2 lg:grid-cols-3  mx-auto gap-x-3 my-12 md:my-14">
+        {/* blogs */}
+        <div className=" grid  md:grid-cols-2 lg:grid-cols-3  mx-auto gap-x-3 my-12 md:my-14">
           {/* s1 */}
           <div className="">
             <div className=" w-full rounded-lg p-4 h-full">
@@ -71,8 +73,9 @@ const Blog = () => {
             </div>
           </div>
         </div>
-  </section>
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default Blog
+export default Blogs;

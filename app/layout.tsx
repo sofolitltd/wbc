@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {
   title: "Wellbeing Clinic",
-  description: "Mental Health Care",
+  description: "Wellbeing Clinic is a mental health service provider offering a comprehensive range of services for optimal mental health. We provide personalized, compassionate care that addresses your unique needs and goals.",
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body className="mb-10 px-4 sm:px-6 md:px-24">
+      <body>
         <Navbar />
         <main className="relative overflow-hidden">{children}</main>
         <Footer />

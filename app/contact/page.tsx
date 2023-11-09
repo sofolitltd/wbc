@@ -1,20 +1,21 @@
 import Image from "next/image";
 const Contact = () => {
   return (
-    <section className="p-10 xl:px-20">
+    <section className="px-4 sm:px-6 md:px-24 mt-16">
       {/* header */}
-      <h1 className="bold-32">Contact Us </h1>
-      <div className=" mt-1 mb-10 h-0.5 w-[100px] bg-gray-50"></div>
+      <h1 className="bold-32">Contact us </h1>
+      <div className=" mt-1 h-0.5 w-[100px] bg-gray-50"></div>
+
 
       {/* body */}
 
-      <div className=" w-full gap-16 justify-between flex-none xl:flex">
+      <div className=" w-full py-12 gap-16 justify-between flex-none xl:flex">
         {/* left */}
         <div className="flex w-full">
           <div className="pb-10">
             {/* loc */}
             <div className="flex gap-4">
-              <div className=" w-15 bg-green-600 p-2 rounded-full inline">
+              <div className="h-10 bg-green-600 p-2 rounded-full">
                 <Image src="/location.svg" alt="std" width={24} height={24} />
               </div>
 
@@ -29,7 +30,7 @@ const Contact = () => {
 
             {/* mail */}
             <div className="mt-10 flex gap-4">
-              <div className=" w-15 bg-red-600 p-2 rounded-full">
+              <div className=" h-10 bg-red-600 p-2 rounded-full">
                 <Image src="/tech.svg" alt="std" width={24} height={24} />
               </div>
 
@@ -48,8 +49,8 @@ const Contact = () => {
 
             {/* mobile */}
             <div className="mt-10 flex gap-4">
-              <div className=" w-15 bg-blue-600 p-2 rounded-full">
-                <Image src="/tech.svg" alt="std" width={24} height={24} />
+              <div className=" h-10 bg-blue-600 p-2 rounded-full">
+                <Image src="/map.svg" alt="std" width={24} height={24} />
               </div>
 
               <div>
@@ -63,12 +64,12 @@ const Contact = () => {
               </div>
             </div>
 
-            <h3 className=" mt-12 bold-20  mb-1">Social Media</h3>
+            <h3 className=" mt-16 bold-20  mb-1">Social Media</h3>
 
             {/* socila media */}
             <div className="mt-2 flex gap-4">
               {/* facebook */}
-              <div className="p-2 hover:rounded-full hover:bg-slate-100">
+              <div className="p-2 bg-slate-100 rounded-full hover:bg-slate-200">
                 <a
                   target="_blank"
                   href={"https://facebook.com/wellbeingclinicbd"}
@@ -83,7 +84,7 @@ const Contact = () => {
               </div>
 
               {/* instagram */}
-              <div className="p-2 hover:rounded-full hover:bg-slate-100">
+              <div className="p-2 bg-slate-100 rounded-full hover:bg-slate-200">
                 <a
                   target="_blank"
                   href={"https://instagram.com/wellbeingclinicbd"}
@@ -98,7 +99,7 @@ const Contact = () => {
               </div>
 
               {/* youtube.svg */}
-              <div className=" p-2 hover:rounded-full hover:bg-slate-100">
+              <div className="p-2 bg-slate-100 rounded-full hover:bg-slate-200">
                 <a
                   target="_blank"
                   href={"https://youtube.com/@wellbeingclinicbd"}
@@ -115,8 +116,8 @@ const Contact = () => {
           </div>
         </div>
         {/* right */}
-        <div className="flex w-full bg-slate-100 justify-center">
-          <Image src="/boat.png" alt="contact" height={500} width={500}></Image>
+        <div className="flex mx-auto justify-center items-center bg-slate-50/75">
+          <h1 className=" p-16 text-6xl font-extrabold text-slate-300 text-center">Wellbeing Clinic</h1>
         </div>
       </div>
     </section>
