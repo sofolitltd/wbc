@@ -9,7 +9,7 @@ const Footer = () => {
           <Image src={"/logo.svg"} alt="logo" height={24} width={180}></Image>
         </Link>
 
-        <p className=" mt-2 font-light text-slate-500"> Leading mental health service provide</p>
+        <p className=" mt-2 font-light text-slate-500"> Leading mental health service provider</p>
         {/* socila media */}
         <div className="flex gap-x-4 mt-8">
           {/* facebook */}
