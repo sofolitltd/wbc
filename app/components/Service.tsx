@@ -4,17 +4,13 @@ const Service = () => {
   const calendarLink = "https://calendar.app.google/qx5AaV4LHTVXJPGh9";
 
   return (
-    <section>
+    <div>
       <div className="max-w mx-auto pt-12 sm:pt-20 md:pt-20">
         <p className="mt-8 font-semibold text-indigo-500 dark:text-indigo-400">
           Services
         </p>
 
-<<<<<<< HEAD
         <h2 className="mt-2 text-3xl md:text-5xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
-=======
-        <h2 className="mt-2 text-3xl md:text-5xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50">
->>>>>>> 743fde5 (fix)
           Service we provide
         </h2>
 
@@ -99,7 +95,7 @@ const Service = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
