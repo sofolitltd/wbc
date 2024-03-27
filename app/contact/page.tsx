@@ -24,7 +24,7 @@ const Contact = () => {
                 <p className="text-gray-30 pb-1">
                   Chittagong University, Chittagong.
                 </p>
-                <p className="text-gray-30">Dhaka University, Chittagong.</p>
+                
               </div>
             </div>
 
@@ -41,9 +41,8 @@ const Contact = () => {
                     wellbeingclinicbd@gmail.com
                   </p>
                 </a>
-                <a href="mailto:info@sofolit.com">
-                  <p className="text-gray-30">info@sofolit.com</p>
-                </a>
+              
+                
               </div>
             </div>
 
@@ -55,8 +54,8 @@ const Contact = () => {
 
               <div>
                 <h3 className="bold-20  mb-1">Mobile No.</h3>
-                <a href="tel:+8801704340860">
-                  <p className="text-gray-30 pb-1">+88 01704 340 860</p>
+                <a href="tel:+8801823161333">
+                  <p className="text-gray-30 pb-1">+88 01823 161 333</p>
                 </a>
                 <a href="tel:+8801521529606">
                   <p className="text-gray-30">+88 01521 529 606</p>

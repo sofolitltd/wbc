@@ -1,78 +1,102 @@
-import React from 'react'
-import Image from 'next/image'
+"use client";
 
-const Blog = () => {
-  return (
-    <section className="px-4 sm:px-6 md:px-24 mt-10 md:mt-16">
-    {/* header */}
-    <h1 className="bold-32">Blog</h1>
-    <div className=" mt-1 h-0.5 w-[50px] bg-gray-50"></div>
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import Image from "next/image";
+import Link from "next/link";
+import db from "@/firebase/firebase";
 
-
-    {/* blogs */}
-    <div className=" grid  md:grid-cols-2 lg:grid-cols-3  mx-auto gap-x-6 my-12 md:my-14">
-          {/* s1 */}
-          <div className="">
-            <div className=" w-full rounded-lg py-4 h-full">
-              <Image
-                className=" flex  bg-blue-400/50 rounded-lg items-center"
-                src={"/img-1.png"}
-                alt="logo"
-                width={500}
-                height={500}
-              ></Image>
-              <p className=" mt-3 font-bold text-lg text-slate-700">
-                Why should you contact with counselor
-              </p>
-              <p className=" my-3 text-sm text-slate-500">
-                A process through which clients work one-on-one with a trained
-                mental health professionals.
-              </p>
-            </div>
-          </div>
-
-          {/* s2 */}
-          <div className="">
-            <div className=" w-full rounded-lg py-4 h-full">
-              <Image
-                className=" flex  bg-blue-400/50 rounded-lg items-center"
-                src={"/img-1.png"}
-                alt="logo"
-                width={500}
-                height={500}
-              ></Image>
-              <p className=" mt-3 font-bold text-lg text-slate-700">
-                Why should you contact with counselor
-              </p>
-              <p className=" my-3 text-sm text-slate-500">
-                A process through which clients work one-on-one with a trained
-                mental health professionals.
-              </p>
-            </div>
-          </div>
-
-          {/* s1 */}
-          <div className="">
-            <div className=" w-full rounded-lg py-4 h-full">
-              <Image
-                className=" flex  bg-blue-400/50 rounded-lg items-center"
-                src={"/img-1.png"}
-                alt="logo"
-                width={500}
-                height={500}
-              ></Image>
-              <p className=" mt-3 font-bold text-lg text-slate-700">
-                Why should you contact with counselor
-              </p>
-              <p className=" my-3 text-sm text-slate-500">
-                A process through which clients work one-on-one with a trained
-                mental health professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-  </section>
-  )
+interface Blog {
+  id: string;
+  image: string;
+  content: string;
+  title: string;
 }
 
-export default Blog
+const Blogs = () => {
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [loading, setLoading] = useState(true); // Loading state
+
+  const fetchData = async () => {
+    try {
+      const blogsCollection = collection(db, "blog"); // Reference to your blogs collection
+      const snapshot = await getDocs(blogsCollection);
+
+      const blogList: Blog[] = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        image: doc.data().image,
+        content: doc.data().content,
+        title: doc.data().title,
+      }));
+
+      setBlogs(blogList);
+    } catch (error) {
+      console.error("Error fetching blogs:", error);
+    } finally {
+      setLoading(false); // Set loading to false when data fetching is complete
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  return (
+    <section className="px-4 sm:px-6 md:px-24 mt-10 md:mt-16">
+      <div>
+        {/* header */}
+        <h1 className="bold-32">Blog </h1>
+        <div className=" mt-1 h-0.5 w-[100px] bg-gray-50"></div>
+      </div>
+
+        {/* body */}
+      <div className="py-12">
+        {loading ? (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {[...Array(8)].map((_, index) => (
+              <div
+                key={index}
+                className="bg-gray-200 h-80 animate-pulse rounded-md shadow-md"
+              ></div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto max-w-7xl">
+            {blogs.map((blog) => (
+              <Link
+                href={{
+                  pathname: `/blog/${blog.id}`,
+                }}
+                key={blog.id}
+              >
+                <div className="flex flex-col rounded-md shadow-md overflow-hidden cursor-pointer">
+                  <div className="relative w-full h-60 md:h-48 lg:h-64">
+                    {blog.image && (
+                      <Image
+                        src={blog.image}
+                        alt=""
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-t-md"
+                      />
+                    )}
+                  </div>
+                  <div className="p-4">
+                    <div className="flex items-center justify-between"></div>
+                    <div className="title-section flex flex-col h-12 overflow-hidden mt-2">
+                      <h1 className="text-lg text-black font-semibold overflow-hidden leading-6">
+                        <span className="line-clamp-2">{blog.title}</span>
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
+
+export default Blogs;

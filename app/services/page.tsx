@@ -1,23 +1,26 @@
 import Image from "next/image";
 
 const Services = () => {
+  const calendarLink = "https://calendar.app.google/qx5AaV4LHTVXJPGh9";
+
   return (
     <section className="px-4 sm:px-6 md:px-24 mt-10 md:mt-16">
       {/* header */}
       <h1 className="bold-32">Services</h1>
-      <div className=" mt-1 h-0.5 w-[100px] bg-gray-50"></div>
+      <div className="mt-1 h-0.5 w-[100px] bg-gray-50"></div>
 
       {/* row */}
       <div className="mx-auto max-w-[1440px] grid grid-cols-1 lg:grid-cols-2 gap-8 py-12">
         {/* r-1 */}
-        <div className="border shadow-md rounded-xl p-5 hover:shadow-xl">
+        <a href={calendarLink} target="_blank" rel="noopener noreferrer" className="border shadow-md rounded-xl p-5 hover:shadow-xl block">
           <div className="flex gap-4">
             <Image
-              src="/person-1.png"
+              src="/student.jpeg"
               alt="std"
               width={64}
               height={64}
-              className=" items-center"
+              
+              className=" items-center rounded-xl"
             />
             <div>
               <h3 className="bold-20 mt-1">Student Counseling</h3>
@@ -37,8 +40,8 @@ const Services = () => {
           <div className="flex gap-5">
             <div className="mt-5 border px-3 py-2 rounded">
               <div className=" flex gap-4">
-                <p className=" line-through">700 BDT </p>
-                <p className=" font-bold">500 BDT </p>
+                <p className=" line-through">500 BDT </p>
+                <p className=" font-bold">300 BDT </p>
               </div>
             </div>
             <div className="mt-5 border px-3 py-2 rounded">
@@ -48,17 +51,17 @@ const Services = () => {
               </div>
             </div>
           </div>
-        </div>
-
+        </a>
+        
         {/* r-2 */}
-        <div className="border shadow-md  rounded-xl p-5 hover:shadow-xl">
+        <a href={calendarLink} target="_blank" rel="noopener noreferrer" className="border shadow-md rounded-xl p-5 hover:shadow-xl block">
           <div className="flex gap-4">
             <Image
-              src="/person-1.png"
+              src="/couple.jpeg"
               alt="std"
               width={64}
               height={64}
-              className=" items-center"
+              className=" items-center rounded-xl"
             />
             <div>
               <h3 className="bold-20 mt-1">Couple Counseling</h3>
@@ -87,17 +90,17 @@ const Services = () => {
               </div>
             </div>
           </div>
-        </div>
-
+        </a>
+        
         {/* r-3 */}
-        <div className="border shadow-md  rounded-xl p-5 hover:shadow-xl">
+        <a href={calendarLink} target="_blank" rel="noopener noreferrer" className="border shadow-md rounded-xl p-5 hover:shadow-xl block">
           <div className="flex gap-4">
             <Image
-              src="/person-1.png"
+              src="/family.jpeg"
               alt="std"
               width={64}
               height={64}
-              className=" items-center"
+              className=" items-center rounded-xl"
             />
             <div>
               <h3 className="bold-20 mt-1">Family Counseling</h3>
@@ -126,7 +129,7 @@ const Services = () => {
               </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </section>
   );

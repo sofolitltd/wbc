@@ -6,7 +6,7 @@ const Footer = () => {
       {/* logo */}
       <div className="">
         <Link href={"/"}>
-          <Image src={"/logo.svg"} alt="logo" height={24} width={180}></Image>
+          <Image src={"/logo.png"} alt="logo" height={0} width={250}></Image>
         </Link>
 
         <p className=" mt-2 font-light text-slate-500"> Leading mental health service provider</p>
